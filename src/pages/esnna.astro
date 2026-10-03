@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+import ComingSoon from '../components/ComingSoon.jsx';
+---
+
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Prevención ESNNA - Memories Destinos Travel Agency</title>
+	</head>
+	<body class="bg-white antialiased font-sans flex flex-col min-h-screen">
+		<Navbar client:load forceSolid={true} />
+		<main class="flex-grow pt-20">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+				<h1 class="text-4xl font-bold text-center text-slate-800 mb-8">Prevención ESNNA</h1>
+				<ComingSoon client:load />
+			</div>
+		</main>
+        <Footer client:visible />
+	</body>
+</html>

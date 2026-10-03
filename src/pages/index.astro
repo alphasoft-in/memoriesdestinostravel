@@ -1,18 +1,26 @@
 ---
 import '../styles/global.css';
-import ComingSoon from '../components/ComingSoon.jsx';
+import Navbar from '../components/Navbar.jsx';
+import Hero from '../components/Hero.jsx';
+import Destinations from '../components/Destinations.jsx';
+import Footer from '../components/Footer.jsx';
 ---
 
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Memories Destinos - Próximamente</title>
-		<meta name="description" content="Memories Destinos: Agencia de viajes. Próximamente prepararemos una experiencia única para tus viajes." />
+		<title>Memories Destinos - Travel Agency</title>
+		<meta name="description" content="Descubre los mejores destinos turísticos con Memories Destinos Travel Agency. Creamos recuerdos inolvidables." />
 	</head>
-	<body>
-		<ComingSoon client:load />
+	<body class="bg-white antialiased font-sans">
+		<Navbar client:load />
+		<main>
+			<Hero client:load />
+			<Destinations client:visible limit={6} />
+		</main>
+        <Footer client:visible />
 	</body>
 </html>

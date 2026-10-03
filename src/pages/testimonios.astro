@@ -1,0 +1,23 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+---
+
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Testimonios - Memories Destinos Travel Agency</title>
+	</head>
+	<body class="bg-white antialiased font-sans flex flex-col min-h-screen">
+		<Navbar client:load forceSolid={true} />
+		<main class="flex-grow pt-24 md:pt-28">
+			<Testimonials client:visible />
+		</main>
+        <Footer client:visible />
+	</body>
+</html>
