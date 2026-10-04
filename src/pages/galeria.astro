@@ -13,7 +13,7 @@ import Gallery from '../components/Gallery.jsx';
 	<body class="bg-white antialiased font-sans flex flex-col min-h-screen">
 		<Navbar client:load forceSolid={true} />
 		<main class="flex-grow pt-24 md:pt-28">
-			<Gallery client:visible />
+			<Gallery client:load />
 		</main>
         <Footer client:visible />
 	</body>
