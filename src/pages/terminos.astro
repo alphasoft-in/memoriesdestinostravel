@@ -1,0 +1,37 @@
+---
+import SEO from '../components/SEO.astro';
+import '../styles/global.css';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<html lang="es" class="scroll-smooth">
+	<head>
+		<SEO title="Términos de Servicio - Memories Destinos Travel Agency" description="Términos y condiciones del servicio de Memories Destinos Travel Agency." />
+	</head>
+	<body class="bg-white antialiased font-sans flex flex-col min-h-screen">
+		<Navbar client:load forceSolid={true} />
+		<main class="flex-grow pt-40 md:pt-48 pb-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-8">Términos de Servicio</h1>
+            <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+                <p>Bienvenido a Memories Destinos Travel Agency. Al utilizar nuestros servicios, usted acepta los siguientes términos y condiciones.</p>
+                
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">1. Reservas y Pagos</h2>
+                <p>Para confirmar una reserva, se requiere un depósito inicial. El saldo restante debe pagarse según las políticas específicas del paquete contratado antes de la fecha de inicio del tour.</p>
+                
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">2. Cancelaciones y Reembolsos</h2>
+                <p>Las cancelaciones deben solicitarse por escrito. Dependiendo de la anticipación de la cancelación, pueden aplicar cargos o penalidades. Los tickets de tren, vuelos y entradas (como Machu Picchu) generalmente no son reembolsables.</p>
+                
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">3. Responsabilidad</h2>
+                <p>Nuestra agencia actúa como intermediario entre los clientes y los proveedores de servicios (hoteles, transportes, etc.). No nos responsabilizamos por retrasos, pérdidas o daños causados por factores externos, clima, o situaciones fuera de nuestro control (fuerza mayor).</p>
+                
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">4. Documentación</h2>
+                <p>Es responsabilidad exclusiva del pasajero contar con la documentación necesaria (pasaporte vigente, visas, vacunas, documento de identidad) para su viaje.</p>
+
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">5. Modificaciones</h2>
+                <p>Nos reservamos el derecho de modificar itinerarios o servicios por motivos operativos, seguridad o condiciones climáticas para asegurar el bienestar de nuestros pasajeros.</p>
+            </div>
+		</main>
+        <Footer client:visible />
+	</body>
+</html>

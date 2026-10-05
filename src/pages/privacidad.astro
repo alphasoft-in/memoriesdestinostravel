@@ -1,0 +1,44 @@
+---
+import SEO from '../components/SEO.astro';
+import '../styles/global.css';
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<html lang="es" class="scroll-smooth">
+	<head>
+		<SEO title="Política de Privacidad - Memories Destinos Travel Agency" description="Políticas de privacidad y protección de datos de Memories Destinos Travel Agency." />
+	</head>
+	<body class="bg-white antialiased font-sans flex flex-col min-h-screen">
+		<Navbar client:load forceSolid={true} />
+		<main class="flex-grow pt-40 md:pt-48 pb-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-8">Política de Privacidad</h1>
+            <div class="prose prose-slate prose-lg max-w-none text-slate-600 space-y-6">
+                <p>En Memories Destinos Travel Agency, valoramos su privacidad y nos comprometemos a proteger sus datos personales.</p>
+                
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">1. Recopilación de Información</h2>
+                <p>Recopilamos información personal (como nombre, correo electrónico, número de teléfono y datos de documentos de identidad) estrictamente necesaria para procesar sus reservas, organizar sus tours y contactarlo respecto a nuestros servicios.</p>
+                
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">2. Uso de la Información</h2>
+                <p>Sus datos personales se utilizan exclusivamente para:
+                <ul class="list-disc pl-6 mt-2 space-y-2">
+                    <li>Gestionar y confirmar sus reservas de viaje.</li>
+                    <li>Adquirir boletos, ingresos (ej. Machu Picchu) y reservar hoteles a su nombre.</li>
+                    <li>Enviarle información importante sobre su itinerario.</li>
+                    <li>Responder a sus consultas o mensajes vía WhatsApp o correo electrónico.</li>
+                </ul>
+                </p>
+                
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">3. Compartir Información</h2>
+                <p>No vendemos ni compartimos su información personal con terceros para fines publicitarios. Sus datos solo se comparten con proveedores de servicios esenciales (aerolíneas, hoteles, ministerio de cultura) en la medida necesaria para completar sus arreglos de viaje.</p>
+                
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">4. Seguridad de los Datos</h2>
+                <p>Implementamos medidas de seguridad administrativas y tecnológicas para proteger su información personal contra accesos no autorizados, pérdida o alteración.</p>
+
+                <h2 class="text-2xl font-bold text-slate-800 mt-8 mb-4">5. Derechos del Usuario</h2>
+                <p>Usted tiene derecho a solicitar el acceso, rectificación o eliminación de sus datos personales de nuestra base de datos comunicándose con nosotros a través de nuestros canales oficiales.</p>
+            </div>
+		</main>
+        <Footer client:visible />
+	</body>
+</html>

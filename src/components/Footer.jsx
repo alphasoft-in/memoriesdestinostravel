@@ -70,8 +70,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Memories Destinos Travel Agency. Todos los derechos reservados.
           </p>
           <div className="flex space-x-4 text-xs md:text-sm text-[#7ca88e]">
-            <a href="#" className="hover:text-white transition-colors">Términos de servicio</a>
-            <a href="#" className="hover:text-white transition-colors">Política de privacidad</a>
+            <a href="/terminos" className="hover:text-white transition-colors">Términos de servicio</a>
+            <a href="/privacidad" className="hover:text-white transition-colors">Política de privacidad</a>
           </div>
         </div>
       </div>

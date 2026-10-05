@@ -3,20 +3,50 @@ import SEO from '../components/SEO.astro';
 import '../styles/global.css';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
-import ComingSoon from '../components/ComingSoon.jsx';
 ---
 
 <html lang="es" class="scroll-smooth">
 	<head>
-		<SEO title="Prevención ESNNA - Memories Destinos Travel Agency" description="Descubre los mejores destinos turísticos con Memories Destinos Travel Agency." />
+		<SEO title="Prevención ESNNA - Memories Destinos Travel Agency" description="Compromiso de Memories Destinos Travel Agency en contra de la Explotación Sexual de Niñas, Niños y Adolescentes (ESNNA)." />
 	</head>
 	<body class="bg-white antialiased font-sans flex flex-col min-h-screen">
 		<Navbar client:load forceSolid={true} />
-		<main class="flex-grow pt-20">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-				<h1 class="text-4xl font-bold text-center text-slate-800 mb-8">Prevención ESNNA</h1>
-				<ComingSoon client:load />
-			</div>
+		<main class="flex-grow pt-40 md:pt-48 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-center text-slate-800 mb-10">Prevención ESNNA</h1>
+            
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img 
+                        src="/esnna.webp" 
+                        alt="Cero tolerancia a la Explotación Sexual de Niñas, Niños y Adolescentes" 
+                        class="w-auto max-w-[200px] md:max-w-[280px] object-contain rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                    />
+                </div>
+                
+                <div class="w-full md:w-1/2 prose prose-slate prose-lg text-slate-600">
+                    <p class="text-xl font-medium text-slate-800 mb-4">
+                        Cero tolerancia a la Explotación Sexual de Niñas, Niños y Adolescentes.
+                    </p>
+                    <p>
+                        En <strong>Memories Destinos Travel Agency</strong>, mantenemos un firme compromiso con el turismo responsable, ético y sostenible. Rechazamos enérgicamente cualquier forma de explotación, pornografía y turismo sexual de menores (ESNNA).
+                    </p>
+                    <p>
+                        Nos regimos estrictamente bajo el marco legal peruano (Ley N° 30802 y Ley N° 29408) para garantizar la protección de los menores de edad y evitar que los viajes sean utilizados como medio para vulnerar sus derechos fundamentales.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-slate-800 mt-6 mb-3">Nuestro Compromiso</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Garantizar ambientes seguros en todas nuestras operaciones turísticas.</li>
+                        <li>Fomentar prácticas responsables entre nuestros proveedores y clientes.</li>
+                        <li>Reportar inmediatamente cualquier situación sospechosa a las autoridades.</li>
+                    </ul>
+                    
+                    <div class="mt-8 p-6 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
+                        <p class="text-red-800 font-bold m-0">¡Protejamos a nuestra niñez!</p>
+                        <p class="text-red-700 text-sm mt-1 mb-0">El turismo es para disfrutar, descubrir y respetar. No seas cómplice. Denuncia.</p>
+                    </div>
+                </div>
+            </div>
 		</main>
         <Footer client:visible />
 	</body>
