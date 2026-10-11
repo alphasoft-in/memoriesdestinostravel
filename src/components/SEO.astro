@@ -3,38 +3,76 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	type?: string;
 }
 
 const { 
 	title, 
 	description, 
-	image = '/apple-touch-icon.png' 
+	image = '/machupicchu.jpg',
+	type = 'website'
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://memoriesdestinos.com');
+const imageURL = new URL(image, Astro.site || 'https://memoriesdestinos.com');
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Memories Destinos Travel Agency",
+  "url": "https://memoriesdestinos.com",
+  "logo": "https://memoriesdestinos.com/logo.png",
+  "image": "https://memoriesdestinos.com/machupicchu.jpg",
+  "description": "Agencia de viajes y turismo en Cusco, Perú. Especialistas en paquetes turísticos, Machu Picchu, tours al Valle Sagrado, Montaña de 7 Colores y experiencias personalizadas.",
+  "telephone": "+51961233893",
+  "email": "memoriestravelagencycus@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cusco",
+    "addressRegion": "Cusco",
+    "addressCountry": "PE"
+  },
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.facebook.com/share/19cxWBJyU3/",
+    "https://www.instagram.com/memories_travel.agency",
+    "https://www.tiktok.com/@memories.travel.a0"
+  ]
+};
 ---
 <meta charset="utf-8" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="generator" content={Astro.generator} />
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="robots" content="index, follow" />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={imageURL} />
+<meta property="og:site_name" content="Memories Destinos Travel Agency" />
+<meta property="og:locale" content="es_PE" />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL} />
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />

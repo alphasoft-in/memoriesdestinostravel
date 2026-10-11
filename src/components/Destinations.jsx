@@ -57,56 +57,56 @@ const Destinations = ({ limit }) => {
     {
       id: 11,
       title: 'Cusco Inolvidable 9D/8N',
-      image: 'https://images.unsplash.com/photo-1581404018318-7b9609503460?q=80&w=2070&auto=format&fit=crop',
+      image: '/destinos/cusco-7d6n.png',
       price: 'Desde $999',
       rating: '4.9',
     },
     {
       id: 12,
       title: 'Cusco Esencial 10D/9N',
-      image: 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop',
+      image: '/destinos/cusco-8d7n.png',
       price: 'Desde $1,099',
       rating: '4.8',
     },
     {
       id: 13,
       title: 'Cusco Místico 11D/10N',
-      image: 'https://images.unsplash.com/photo-1581404018318-7b9609503460?q=80&w=2070&auto=format&fit=crop',
+      image: '/destinos/cusco-6d5n.png',
       price: 'Desde $1,199',
       rating: '4.9',
     },
     {
       id: 14,
       title: 'Cusco Total 12D/11N',
-      image: 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop',
+      image: '/destinos/cusco-5d4n.png',
       price: 'Desde $1,299',
       rating: '5.0',
     },
     {
       id: 15,
       title: 'Cusco Supremo 13D/12N',
-      image: 'https://images.unsplash.com/photo-1581404018318-7b9609503460?q=80&w=2070&auto=format&fit=crop',
+      image: '/destinos/cusco-4d3n.png',
       price: 'Desde $1,399',
       rating: '5.0',
     },
     {
       id: 16,
       title: 'Montaña 7 Colores (Full Day)',
-      image: 'https://images.unsplash.com/photo-1574958269340-fa927503f3da?q=80&w=800&auto=format&fit=crop',
+      image: '/destinos/cusco-fullday.png',
       price: 'Consultar',
       rating: '4.9',
     },
     {
       id: 17,
       title: 'Laguna Humantay (Full Day)',
-      image: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1000&auto=format&fit=crop',
+      image: '/destinos/cusco-mio-3d.png',
       price: 'Consultar',
       rating: '4.8',
     },
     {
       id: 18,
       title: 'Valle Sagrado VIP',
-      image: 'https://images.unsplash.com/photo-1510255392095-2c8c49e1f579?q=80&w=800&auto=format&fit=crop',
+      image: '/destinos/cusco-7d6n.png',
       price: 'Consultar',
       rating: '4.9',
     }
@@ -118,8 +118,12 @@ const Destinations = ({ limit }) => {
     <section id="destinos" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-bold text-[#5a9d2b] uppercase tracking-wider mb-2">Destinos Populares</h2>
-          <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Explora nuestros paquetes favoritos</h3>
+          <span className="text-sm font-bold text-[#5a9d2b] uppercase tracking-wider mb-2 block">Destinos Populares</span>
+          {limit ? (
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Explora nuestros paquetes favoritos</h2>
+          ) : (
+            <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Paquetes Turísticos en Cusco y Perú</h1>
+          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

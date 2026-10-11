@@ -84,7 +84,7 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[#1c75a5] font-bold tracking-wider uppercase text-sm mb-4 block">Capturando momentos</span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-6">Nuestra Galería</h2>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-6">Nuestra Galería</h1>
           <p className="text-slate-600 text-lg">
             Un vistazo a los paisajes mágicos y experiencias inolvidables que te esperan en el corazón de los Andes peruanos.
           </p>

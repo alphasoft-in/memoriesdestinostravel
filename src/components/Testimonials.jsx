@@ -57,7 +57,7 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[#5a9d2b] font-bold tracking-wider uppercase text-sm mb-4 block">Lo que dicen de nosotros</span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-6">Testimonios de Viajeros</h2>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-6">Testimonios de Viajeros</h1>
           <p className="text-slate-600 text-lg">
             Cientos de personas ya han confiado en nosotros para vivir la aventura de sus sueños. Aquí te compartimos algunas de sus experiencias.
           </p>
