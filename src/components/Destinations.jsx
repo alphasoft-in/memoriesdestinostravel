@@ -126,7 +126,6 @@ const Destinations = ({ limit }) => {
           {displayedDestinations.map((dest) => (
             <div key={dest.id} className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100">
               <div className="relative h-72 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent z-10"></div>
                 <img 
                   src={dest.image} 
                   alt={dest.title} 
