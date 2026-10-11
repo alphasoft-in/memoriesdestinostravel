@@ -158,6 +158,25 @@ const Destinations = ({ limit }) => {
             </div>
           ))}
         </div>
+
+        {limit && (
+          <div className="mt-16 text-center">
+            <a
+              href="/destinos"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white rounded-full bg-gradient-to-r from-[#1c75a5] to-[#5a9d2b] hover:shadow-[0_10px_25px_rgba(90,157,43,0.35)] transition-all duration-300 hover:-translate-y-1 group"
+            >
+              <span>Ver más destinos</span>
+              <svg 
+                className="w-5 h-5 ml-2 transform group-hover:translate-x-1.5 transition-transform duration-300" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );
