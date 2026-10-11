@@ -27,9 +27,32 @@ const Gallery = () => {
     { c: "col-span-1", r: "row-span-1" }, // 19
     { c: "col-span-2", r: "row-span-1" }, // 20
     { c: "col-span-2", r: "row-span-1" }, // 21
+    { c: "col-span-1", r: "row-span-1" }, // 22
+    { c: "col-span-1", r: "row-span-1" }, // 23
+    { c: "col-span-2", r: "row-span-2" }, // 24
+    { c: "col-span-1", r: "row-span-1" }, // 25
+    { c: "col-span-1", r: "row-span-1" }, // 26
+    { c: "col-span-2", r: "row-span-1" }, // 27
+    { c: "col-span-2", r: "row-span-1" }, // 28
+    { c: "col-span-2", r: "row-span-1" }, // 29
+    { c: "col-span-2", r: "row-span-1" }, // 30
+    { c: "col-span-1", r: "row-span-1" }, // 31
+    { c: "col-span-1", r: "row-span-1" }, // 32
+    { c: "col-span-1", r: "row-span-1" }, // 33
+    { c: "col-span-1", r: "row-span-1" }, // 34
+    { c: "col-span-2", r: "row-span-1" }, // 35
+    { c: "col-span-2", r: "row-span-1" }, // 36
+    { c: "col-span-1", r: "row-span-1" }, // 37
+    { c: "col-span-1", r: "row-span-1" }, // 38
+    { c: "col-span-1", r: "row-span-1" }, // 39
+    { c: "col-span-1", r: "row-span-1" }, // 40
+    { c: "col-span-1", r: "row-span-1" }, // 41
+    { c: "col-span-1", r: "row-span-1" }, // 42
+    { c: "col-span-1", r: "row-span-1" }, // 43
+    { c: "col-span-1", r: "row-span-1" }, // 44
   ];
 
-  const images = Array.from({ length: 22 }, (_, i) => ({
+  const images = Array.from({ length: 45 }, (_, i) => ({
     src: `/galeria/gal${i + 1}.avif`,
     title: `Memories Destinos Travel`,
     colSpan: layout[i].c,
@@ -78,7 +101,7 @@ const Gallery = () => {
               <img 
                 src={img.src} 
                 alt={img.title} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 contrast-[1.02] saturate-[1.05] brightness-[1.02]" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div className="p-4 md:p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
@@ -117,8 +140,8 @@ const Gallery = () => {
             <img 
               src={images[selectedIndex].src} 
               alt={images[selectedIndex].title}
-              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-fadeIn"
-              onClick={(e) => e.stopPropagation()} // Evita cerrar al tocar la foto
+              className="max-w-full max-h-full object-contain rounded-xl shadow-2xl animate-fadeIn contrast-[1.02] saturate-[1.05] brightness-[1.02]"
+              onClick={(e) => e.stopPropagation()} 
             />
           </div>
 
